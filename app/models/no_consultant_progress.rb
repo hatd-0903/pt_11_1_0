@@ -1,0 +1,2 @@
+class NoConsultantProgress < ApplicationRecord
+end
