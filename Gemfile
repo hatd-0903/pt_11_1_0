@@ -14,8 +14,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "paper_trail", "11.1.0"
 gem "paper_trail-association_tracking", "1.0.0"
 gem "pry"
-
-
+gem "capybara", "2.6.2"
+gem "capybara-webkit", "1.8.0"
+gem "headless", "2.2.2"
 
 group :development do
   gem 'web-console', '>= 4.1.0'
