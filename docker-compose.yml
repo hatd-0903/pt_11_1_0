@@ -20,3 +20,20 @@ services:
       - "3000:3000"
     depends_on:
       - db
+  redis:
+    image: redis:6.2.6
+    ports:
+      - 6679:6379
+  sidekiq:
+    image: enfit/pt:11.1.0
+    # command: bundle exec sidekiq
+    environment:
+      - EMAIL_SERVICE_PORT=1025
+      - EMAIL_SERVICE_ADDRESS=mailcatcher
+      - LANG=C.UTF-8
+    tty: true
+    volumes:
+      - .:/pt_11_1_0
+    depends_on:
+      - db
+      - redis
