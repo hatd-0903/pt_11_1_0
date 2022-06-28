@@ -14,8 +14,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "paper_trail", "11.1.0"
 gem "paper_trail-association_tracking", "1.0.0"
 gem "pry"
-
-
+gem "sidekiq", "5.2.10"
+gem "sidekiq-cron", "0.5.1"
+gem "sidekiq-limit_fetch", "3.1.0"
+gem "redis-rails", "5.0.2"
 
 group :development do
   gem 'web-console', '>= 4.1.0'
